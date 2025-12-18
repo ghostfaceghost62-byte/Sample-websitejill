@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Bakery Homepage</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+  <h1>🍞 Sweet Bakery</h1>
+  <nav>
+    <a href="#" onclick="navigate('Home')">Home</a>
+    <a href="#products" onclick="navigate('Products')">Products</a>
+    <a href="#" onclick="navigate('About')">About</a>
+    <a href="#contact" onclick="navigate('Contact')">Contact</a>
+  </nav>
+</header>
+
+<div class="search-bar">
+  <input type="text" id="searchInput" placeholder="Search pastries..." onkeyup="searchItems()">
+</div>
+
+<section class="hero">
+  <img id="heroImage" src="https://images.unsplash.com/photo-1542826438-8b4d8c6c4d2f" alt="Pastries">
+  <input type="file" accept="image/*" onchange="loadImage(event)">
+  <h2>Freshly Baked Everyday</h2>
+</section>
+
+<section id="products">
+  <h2>Best Sellers</h2>
+  <div class="grid">
+    <div class="card" data-name="Chocolate Cake" data-category="Cakes">
+      <img src="https://images.unsplash.com/photo-1601972599720-b4d9a4c1a2c4">
+      <p>Chocolate Cake</p>
+    </div>
+    <div class="card" data-name="Cookies" data-category="Cookies">
+      <img src="https://images.unsplash.com/photo-1598373182133-52452f7691ef">
+      <p>Cookies</p>
+    </div>
+    <div class="card" data-name="Bread" data-category="Bread">
+      <img src="https://images.unsplash.com/photo-1549931319-a545dcf3bc73">
+      <p>Bread</p>
+    </div>
+    <div class="card" data-name="Cupcake" data-category="Cakes">
+      <img src="https://images.unsplash.com/photo-1519869325930-281384150729">
+      <p>Cupcake</p>
+    </div>
+  </div>
+</section>
+
+<section class="categories">
+  <h2>Categories</h2>
+  <button onclick="filterCategory('All')">All</button>
+  <button onclick="filterCategory('Cakes')">Cakes</button>
+  <button onclick="filterCategory('Cookies')">Cookies</button>
+  <button onclick="filterCategory('Bread')">Bread</button>
+</section>
+
+<footer id="contact">
+  <p>Contact Us: sweetbakery@email.com</p>
+  <p>Store Hours: 8:00 AM – 8:00 PM</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
